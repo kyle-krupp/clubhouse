@@ -1,0 +1,14 @@
+spring:
+  profiles:
+    active: @spring.profiles.active@
+  datasource:
+    url: jdbc:postgresql://clubhouse-4.cork3afhfjs5.us-east-1.rds.amazonaws.com/
+    username: postgres
+    password: password
+
+    liquibase.change-log: classpath:db/liquibase-changelog.xml
+
+server:
+  port: 5000
+
+
