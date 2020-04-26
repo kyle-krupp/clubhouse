@@ -1,7 +1,7 @@
 import React from 'react';
 import { Formik } from 'formik';
 import { Input, Button, Tag } from 'antd';
-import { addNewPlayer } from '../client';
+// import { addNewPlayer } from '../client';
 
 const inputBottomMargin = {marginBottom: '10px'};
 const tagStyle = {backgroundColor: '#f50', color: 'white', ...inputBottomMargin};
@@ -33,15 +33,15 @@ const AddPlayerForm = (props) => (
             return errors;
         }}
         onSubmit={(player, { setSubmitting }) => {
-            addNewPlayer(player).then(() => {
-                props.onSuccess();
-            })
-            .catch(err => {
-                props.onFailure(err);
-            })
-            .finally(() => {
-                setSubmitting(false);
-            })
+            // addNewPlayer(player).then(() => {
+            //     props.onSuccess();
+            // })
+            // .catch(err => {
+            //     props.onFailure(err);
+            // })
+            // .finally(() => {
+            //     setSubmitting(false);
+            // })
         }}>
     {({
         values,

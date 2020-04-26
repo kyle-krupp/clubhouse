@@ -9,9 +9,7 @@ const initialState = {
     players: [],
     selectedPlayer: {},
     loading: false,
-    isAddPlayerModalVisible: false,
-    isEditPlayerModalVisible: false,
-    openAddPlayerModule: false
+    isAddPlayerModalVisible: false
 }
 
 // Create context

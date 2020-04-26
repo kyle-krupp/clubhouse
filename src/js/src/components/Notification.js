@@ -8,7 +8,7 @@ const openNotification = (type, message, description) => {
   };
 
 export const successNotification = (message, description) => 
-  openNotification('sucess', message, description);
+  openNotification('success', message, description);
 
 export const infosNotification = (message, description) => 
   openNotification('info', message, description);

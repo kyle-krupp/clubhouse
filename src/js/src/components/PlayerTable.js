@@ -2,9 +2,7 @@ import React, { Fragment, useContext, useEffect } from "react";
 import { GlobalContext } from "../context/GlobalState";
 
 import Container from '../Container'
-import AddPlayerForm from '../forms/AddPlayerForm';
-import EditPlayerForm from '../forms/EditPlayerForm';
-import { errorNotification } from '../Notification';
+
 
 import {
     Table,
@@ -22,16 +20,11 @@ import {
 export const PlayerTable = () => {
     const { players, getPlayers } = useContext(GlobalContext);
     const { deletePlayer } = useContext(GlobalContext);
-    const { selectedPlayer, editPlayer } = useContext(GlobalContext);
-    const { isAddPlayerModalVisible, closeAddPlayerModal } = useContext(GlobalContext);
-    const { isEditPlayerModalVisible, closeEditPlayerModal } = useContext(GlobalContext);
 
 
     useEffect(() => {
         getPlayers();
-        console.log(players)
-        console.log('+1')
-    }, []);
+    });
 
     const columns = [
       {
@@ -87,47 +80,6 @@ export const PlayerTable = () => {
     ];
 
 
-    const commonElements = () => (
-        <div>
-          <Modal
-            title='Add new player'
-            visible={isAddPlayerModalVisible}
-            onOk={closeAddPlayerModal}
-            onCancel={closeAddPlayerModal}
-            width={1000}>
-            <AddPlayerForm
-              onSuccess={() => {
-                this.closeAddPlayerModal(); 
-                this.fetchPlayers();
-              }}
-              onFailure={(error) => {
-                const message = error.error.message;
-                const description = error.error.httpStatus;
-                errorNotification(message, description);
-              }}
-            />
-          </Modal>
-    
-          {/* <Modal
-            title='Edit'
-            visible={isEditPlayerModalVisible}
-            onOk={closeEditPlayerModal}
-            onCancel={closeEditPlayerModal}
-            width={1000}>
-            
-            <PageHeader title={`${selectedPlayer.playerId}`}/>
-            
-            <EditPlayerForm 
-              initialValues={selectedPlayer} 
-            />
-          </Modal>  */}
-        </div>
-      )
-
-
-
-
-
     return (
         <Container>
           <Table 
@@ -135,8 +87,8 @@ export const PlayerTable = () => {
             dataSource={players} 
             columns={columns} 
             pagination={false}
-            rowKey='playerId'/>
-          {commonElements()}
+            rowKey='playerId'/
+            >
         </Container>
     )
 }
