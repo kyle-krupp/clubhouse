@@ -1,6 +1,6 @@
 import React, { useContext } from "react";
 import { Formik } from "formik";
-import { Input, Button, Tag } from "antd";
+import { Input, Button, Tag, Radio } from "antd";
 import { GlobalContext } from "../../context/GlobalState";
 
 const inputBottomMargin = { marginBottom: "10px" };
@@ -108,14 +108,15 @@ const AddPlayerForm = (props) => {
           {errors.battingAverage && touched.battingAverage && (
             <Tag style={tagStyle}>{errors.battingAverage}</Tag>
           )}
-          <Input
-            style={inputBottomMargin}
-            name="playerType"
-            onChange={handleChange}
-            onBlur={handleBlur}
-            value={values.playerType}
-            placeholder='Player Type eg. "HITTER" or "PITCHER"'
-          />
+          <Radio.Group>
+            <Radio name="HITTER" value={"HITTER"}>
+              HITTER
+            </Radio>
+            <Radio name="PITCHER" value={"PITCHER"}>
+              PITCHER
+            </Radio>
+          </Radio.Group>
+
           {errors.playerType && touched.playerType && (
             <Tag style={tagStyle}>{errors.playerType}</Tag>
           )}

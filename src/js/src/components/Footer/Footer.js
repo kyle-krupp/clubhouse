@@ -35,7 +35,6 @@ const Footer = () => {
         <AddPlayerForm
           onSuccess={() => {
             toggleModal(!isModalVisible);
-            getPlayers();
           }}
           onFailure={(error) => {
             const message = error.error.message;
