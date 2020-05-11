@@ -1,6 +1,6 @@
 import React, { useContext } from 'react'
 import { Formik } from 'formik'
-import { Input, Button, Tag, Radio, notification } from 'antd'
+import { Input, Button, Tag, Radio } from 'antd'
 import { GlobalContext } from '../../context/GlobalState'
 
 const inputBottomMargin = { marginBottom: '10px' }
@@ -39,13 +39,6 @@ const AddPlayerForm = (props) => {
 
                 if (!values.playerType) {
                     errors.playerType = 'Player Type Required'
-                } else if (
-                    !['HITTER', 'hitter', 'PITCHER', 'pitcher'].includes(
-                        values.playerType
-                    )
-                ) {
-                    errors.playerType =
-                        'Player type must be a pitcher or a hitter'
                 }
 
                 return errors
@@ -111,23 +104,18 @@ const AddPlayerForm = (props) => {
                     {errors.battingAverage && touched.battingAverage && (
                         <Tag style={tagStyle}>{errors.battingAverage}</Tag>
                     )}
-                    {/* <Radio.Group>
-            <Radio name="HITTER" value={"HITTER"}>
-              HITTER
-            </Radio>
-            <Radio name="PITCHER" value={"PITCHER"}>
-              PITCHER
-            </Radio>
-          </Radio.Group> */}
-                    <Input
-                        style={inputBottomMargin}
+                    <Radio.Group
                         name="playerType"
-                        type="Player Type"
                         onChange={handleChange}
-                        onBlur={handleBlur}
                         value={values.playerType}
-                        placeholder="Hitter or pitcher"
-                    />
+                    >
+                        <Radio name="HITTER" value={'HITTER'}>
+                            HITTER
+                        </Radio>
+                        <Radio name="PITCHER" value={'PITCHER'}>
+                            PITCHER
+                        </Radio>
+                    </Radio.Group>
 
                     {errors.playerType && touched.playerType && (
                         <Tag style={tagStyle}>{errors.playerType}</Tag>

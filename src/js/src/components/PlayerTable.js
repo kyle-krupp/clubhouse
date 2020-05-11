@@ -119,6 +119,7 @@ export const PlayerTable = () => {
 
     return (
         <Container>
+            <h1>HITTERS</h1>
             <Table
                 style={{ marginBottom: '100px' }}
                 dataSource={players.filter((player) =>
@@ -128,6 +129,7 @@ export const PlayerTable = () => {
                 pagination={false}
                 rowKey="playerId"
             />
+            <h1>PITCHERS</h1>
             <Table
                 style={{ marginBottom: '100px' }}
                 dataSource={players.filter((player) =>
