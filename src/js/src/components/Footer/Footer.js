@@ -7,7 +7,7 @@ import { GlobalContext } from '../../context/GlobalState'
 import { errorNotification } from '../Notification'
 
 const Footer = () => {
-    const { players, getPlayers } = useContext(GlobalContext)
+    const { players } = useContext(GlobalContext)
     const [isModalVisible, toggleModal] = useState(false)
 
     return (
