@@ -1,7 +1,7 @@
 import React from 'react'
 import { PlayerTable } from './components/PlayerTable'
 import Footer from './components/footer/Footer'
-import './App.css'
+import './styles/App.css'
 import { GlobalProvider } from './context/GlobalState'
 
 import {

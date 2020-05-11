@@ -1,7 +1,7 @@
 import React, { Fragment, useContext, useEffect } from 'react'
 import { GlobalContext } from '../context/GlobalState'
 
-import Container from '../Container'
+import Container from './Container'
 
 import {
     Table,
