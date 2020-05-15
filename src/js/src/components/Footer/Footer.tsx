@@ -1,10 +1,10 @@
 import React, { useContext, useState } from 'react'
-import Container from '../Container'
+import Container from '../Container.tsx'
 import { Button, Avatar, Modal } from 'antd'
-import AddPlayerForm from '../forms/AddPlayerForm'
+import AddPlayerForm from '../forms/AddPlayerForm.tsx'
 import './Footer.css'
-import { GlobalContext } from '../../context/GlobalState'
-import { errorNotification } from '../Notification'
+import { GlobalContext } from '../../context/GlobalState.tsx'
+import { errorNotification } from '../Notification.ts'
 
 const Footer = () => {
     const { players } = useContext(GlobalContext)

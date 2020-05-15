@@ -1,8 +1,8 @@
 import React from 'react'
-import { PlayerTable } from './components/PlayerTable'
-import Footer from './components/footer/Footer'
+import { PlayerTable } from './components/PlayerTable.tsx'
+import Footer from './components/footer/Footer.tsx'
 import './styles/App.css'
-import { GlobalProvider } from './context/GlobalState'
+import { GlobalProvider } from './context/GlobalState.tsx'
 
 import {
     Table,

@@ -1,7 +1,7 @@
 import React, { useContext } from 'react'
 import { Formik } from 'formik'
 import { Input, Button, Tag, Radio } from 'antd'
-import { GlobalContext } from '../../context/GlobalState'
+import { GlobalContext } from '../../context/GlobalState.tsx'
 
 const inputBottomMargin = { marginBottom: '10px' }
 const tagStyle = {

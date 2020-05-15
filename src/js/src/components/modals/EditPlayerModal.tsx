@@ -1,4 +1,5 @@
-  {/* <Modal
+{
+    /* <Modal
             title='Edit'
             visible={isEditPlayerModalVisible}
             onOk={closeEditPlayerModal}
@@ -10,4 +11,5 @@
             <EditPlayerForm 
               initialValues={selectedPlayer} 
             />
-          </Modal>  */}
+          </Modal>  */
+}
