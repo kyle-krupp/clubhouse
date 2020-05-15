@@ -1,0 +1,18 @@
+.ant-table-thead > tr > th {
+    color: rgba(247, 242, 242, 0.85);
+    font-weight: 800;
+    text-align: left;
+    background: #4a777a;
+    border-bottom: 1px solid #e8e8e8;
+    -webkit-transition: background 0.3s ease;
+    transition: background 0.3s ease;
+}
+
+.ant-btn-primary {
+    background-color: #0c2340;
+    border: none;
+}
+
+.ant-btn-primary:hover {
+    background-color: #13335be3;
+}
