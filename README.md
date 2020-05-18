@@ -3,3 +3,5 @@
 
 # clubhouse
 CRUD Sandbox project 
+
+[Live Demo] (http://clubhouse-prod.eba-mppt2gfx.us-east-1.elasticbeanstalk.com/)
